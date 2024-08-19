@@ -29,5 +29,15 @@ namespace WinFormsBorrowSysyem
             var Log = new MainPage();
             Log.Show();
         }
+
+        private void UserText(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordText(object sender, EventArgs e)
+        {
+
+        }
     }
 }

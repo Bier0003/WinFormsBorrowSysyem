@@ -71,7 +71,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(375, 27);
             textBox1.TabIndex = 6;
-            textBox1.Text = "er";
+            textBox1.TextChanged += UserText;
             // 
             // textBox2
             // 
@@ -79,6 +79,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(375, 27);
             textBox2.TabIndex = 7;
+            textBox2.TextChanged += PasswordText;
             // 
             // button1
             // 

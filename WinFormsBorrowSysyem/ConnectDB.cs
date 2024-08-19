@@ -8,5 +8,13 @@ namespace WinFormsBorrowSysyem
 {
     internal class ConnectDB
     {
+
+        string ConnectionString = "host = localhost; port=5432; database=BorrowSystem;User=root; password=admin;";
+
+    
+
+
+
+
     }
 }
