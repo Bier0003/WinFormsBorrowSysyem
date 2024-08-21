@@ -1,4 +1,6 @@
-﻿namespace WinFormsBorrowSysyem
+﻿using System.Windows.Forms.Design;
+
+namespace WinFormsBorrowSystem
 {
     partial class RegisterForm
     {
@@ -40,6 +42,8 @@
             textBox5 = new TextBox();
             button1 = new Button();
             label6 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -93,6 +97,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(375, 27);
             textBox1.TabIndex = 5;
+            textBox1.TextChanged += idstudentBox;
             // 
             // textBox2
             // 
@@ -100,6 +105,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(375, 27);
             textBox2.TabIndex = 6;
+            textBox2.TextChanged += lname;
             // 
             // textBox3
             // 
@@ -107,6 +113,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(375, 27);
             textBox3.TabIndex = 7;
+            textBox3.TextChanged += fname;
             // 
             // textBox4
             // 
@@ -114,6 +121,7 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(375, 27);
             textBox4.TabIndex = 8;
+            textBox4.TextChanged += userBT;
             // 
             // textBox5
             // 
@@ -121,15 +129,17 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(375, 27);
             textBox5.TabIndex = 9;
+            textBox5.TextChanged += pwBT;
             // 
             // button1
             // 
-            button1.Location = new Point(587, 376);
+            button1.Location = new Point(593, 375);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 10;
             button1.Text = "Register";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += RegBT;
             // 
             // label6
             // 
@@ -139,6 +149,15 @@
             label6.Size = new Size(146, 20);
             label6.TabIndex = 11;
             label6.Text = "Personal Information";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(-4, -3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(808, 456);
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += picture;
             // 
             // RegisterForm
             // 
@@ -157,8 +176,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(pictureBox1);
             Name = "RegisterForm";
             Text = "RegisterForm";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -177,5 +198,6 @@
         private TextBox textBox5;
         private Button button1;
         private Label label6;
+        private PictureBox pictureBox1;
     }
 }

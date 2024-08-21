@@ -1,4 +1,4 @@
-﻿namespace WinFormsBorrowSysyem
+﻿namespace WinFormsBorrowSystem
 {
     partial class Login
     {

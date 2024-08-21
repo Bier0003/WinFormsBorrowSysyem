@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinFormsBorrowSysyem
+namespace WinFormsBorrowSystem
 {
     public partial class MainPage : Form
     {
@@ -23,6 +23,21 @@ namespace WinFormsBorrowSysyem
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

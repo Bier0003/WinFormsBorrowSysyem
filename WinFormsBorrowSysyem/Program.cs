@@ -1,4 +1,4 @@
-namespace WinFormsBorrowSysyem
+namespace WinFormsBorrowSystem
 {
     internal static class Program
     {
