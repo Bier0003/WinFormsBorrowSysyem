@@ -37,23 +37,23 @@
             comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
             panel1 = new Panel();
-            panel2 = new Panel();
             button2 = new Button();
-            button4 = new Button();
-            button5 = new Button();
             button6 = new Button();
-            button7 = new Button();
+            button4 = new Button();
+            button3 = new Button();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.Control;
             button1.Location = new Point(665, 106);
             button1.Name = "button1";
             button1.Size = new Size(85, 29);
             button1.TabIndex = 0;
             button1.Text = "Search";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += SearchBT;
             // 
             // listBox1
@@ -112,10 +112,9 @@
             // panel1
             // 
             panel1.BackColor = Color.DarkSlateBlue;
-            panel1.Controls.Add(button7);
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button5);
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(button4);
+            panel1.Controls.Add(button6);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
@@ -126,6 +125,71 @@
             panel1.TabIndex = 18;
             panel1.Paint += panel1_Paint;
             // 
+            // button2
+            // 
+            button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 10F);
+            button2.ForeColor = SystemColors.ActiveCaption;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.BottomLeft;
+            button2.Location = new Point(0, 81);
+            button2.Name = "button2";
+            button2.Size = new Size(184, 60);
+            button2.TabIndex = 7;
+            button2.Text = "Student";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Dock = DockStyle.Top;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI", 10F);
+            button6.ForeColor = SystemColors.ActiveCaption;
+            button6.Image = (Image)resources.GetObject("button6.Image");
+            button6.ImageAlign = ContentAlignment.BottomLeft;
+            button6.Location = new Point(0, 141);
+            button6.Name = "button6";
+            button6.Size = new Size(184, 60);
+            button6.TabIndex = 10;
+            button6.Text = "HardWare";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // button4
+            // 
+            button4.Dock = DockStyle.Top;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Segoe UI", 10F);
+            button4.ForeColor = SystemColors.ActiveCaption;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.ImageAlign = ContentAlignment.BottomLeft;
+            button4.Location = new Point(0, 201);
+            button4.Name = "button4";
+            button4.Size = new Size(184, 60);
+            button4.TabIndex = 11;
+            button4.Text = "Borrow";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Dock = DockStyle.Top;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 10F);
+            button3.ForeColor = SystemColors.ActiveCaption;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.BottomLeft;
+            button3.Location = new Point(0, 261);
+            button3.Name = "button3";
+            button3.Size = new Size(184, 60);
+            button3.TabIndex = 12;
+            button3.Text = "Over Time";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             panel2.Dock = DockStyle.Top;
@@ -134,86 +198,11 @@
             panel2.Size = new Size(184, 81);
             panel2.TabIndex = 0;
             // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Top;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 2F);
-            button2.ForeColor = SystemColors.ActiveCaption;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(0, 81);
-            button2.Name = "button2";
-            button2.Size = new Size(184, 60);
-            button2.TabIndex = 1;
-            button2.Text = "Student";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button4
-            // 
-            button4.Dock = DockStyle.Top;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 2F);
-            button4.ForeColor = SystemColors.ActiveCaption;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(0, 141);
-            button4.Name = "button4";
-            button4.Size = new Size(184, 60);
-            button4.TabIndex = 3;
-            button4.Text = "Student";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Dock = DockStyle.Top;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI", 2F);
-            button5.ForeColor = SystemColors.ActiveCaption;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.Location = new Point(0, 201);
-            button5.Name = "button5";
-            button5.Size = new Size(184, 60);
-            button5.TabIndex = 4;
-            button5.Text = "Student";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            button6.Dock = DockStyle.Top;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 2F);
-            button6.ForeColor = SystemColors.ActiveCaption;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.Location = new Point(0, 261);
-            button6.Name = "button6";
-            button6.Size = new Size(184, 60);
-            button6.TabIndex = 5;
-            button6.Text = "Student";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.Dock = DockStyle.Top;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Segoe UI", 2F);
-            button7.ForeColor = SystemColors.ActiveCaption;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.Location = new Point(0, 321);
-            button7.Name = "button7";
-            button7.Size = new Size(184, 60);
-            button7.TabIndex = 6;
-            button7.Text = "Student";
-            button7.UseVisualStyleBackColor = true;
-            // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             Controls.Add(comboBox2);
@@ -240,11 +229,10 @@
         private ComboBox comboBox1;
         private ComboBox comboBox2;
         private Panel panel1;
-        private Panel panel2;
         private Button button2;
-        private Button button7;
-        private Button button6;
-        private Button button5;
+        private Button button3;
         private Button button4;
+        private Button button6;
+        private Panel panel2;
     }
 }

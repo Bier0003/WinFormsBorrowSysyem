@@ -20,8 +20,8 @@ namespace WinFormsBorrowSystem
 
         private void RegBT(object sender, EventArgs e)
         {
-            ConnectDB connectDB = new ConnectDB();
-            connectDB.Connect();
+
+
 
 
         }
