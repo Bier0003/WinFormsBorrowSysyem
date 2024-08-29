@@ -28,35 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             Search = new Button();
             listBox1 = new ListBox();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
             SuspendLayout();
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(433, 112);
-            textBox2.Margin = new Padding(4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(183, 31);
-            textBox2.TabIndex = 12;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(102, 111);
-            textBox1.Margin = new Padding(4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(247, 31);
-            textBox1.TabIndex = 11;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(372, 115);
+            label3.Location = new Point(341, 115);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(56, 25);
@@ -66,7 +50,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(27, 114);
+            label2.Location = new Point(38, 116);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(77, 25);
@@ -102,15 +86,32 @@
             listBox1.Size = new Size(562, 229);
             listBox1.TabIndex = 14;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(122, 113);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(182, 33);
+            comboBox1.TabIndex = 15;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(405, 115);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(182, 33);
+            comboBox2.TabIndex = 16;
+            // 
             // EquipmentForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
             Controls.Add(listBox1);
             Controls.Add(Search);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -123,13 +124,12 @@
         }
 
         #endregion
-
-        private TextBox textBox2;
-        private TextBox textBox1;
         private Label label3;
         private Label label2;
         private Label label1;
         private Button Search;
         private ListBox listBox1;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
     }
 }
