@@ -1,5 +1,6 @@
 ﻿
 using Npgsql;
+using System.Data;
 
 
 
@@ -8,25 +9,56 @@ namespace WinFormsBorrowSystem
     internal class ConnectDB
     {
 
-        string ConnectionString = "host = localhost; port=5432; database=BorrowSystem;User=root; password=admin;";
+        private string connectionString = "Host=localhost;Username=admin;Password=admin;Database=BorrowSystem";
 
-        public void Connect()
+        public NpgsqlConnection conn;
+        public ConnectDB()
         {
-            using (var conn = new NpgsqlConnection(ConnectionString))
+            conn = new NpgsqlConnection(connectionString);
+        }
+
+        public DataTable Query(NpgsqlCommand cmd)
+        {
+            try
             {
-                try
-                {
-                    conn.Open();
-                    Console.WriteLine("Connection Success!");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"An Error occured: {ex.Message}");
+                conn.Open();
+                cmd.Connection = conn;
 
-                }
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(cmd);
+                DataTable dTable = new DataTable();
+                DataSet dSet = new DataSet();
 
+                adapter.Fill(dSet, "dataTable");
+                dTable = dSet.Tables["dataTable"];
+
+                conn.Close();
+                return dTable;
             }
+            catch (Exception ex)
+            {
 
+                conn.Close();
+            }
+            return new DataTable();
+        }
+
+        public bool Execute(NpgsqlCommand cmd)
+        {
+            try
+            {
+                conn.Open();
+                cmd.Connection = conn;
+                int rowAffected = cmd.ExecuteNonQuery();
+                conn.Close();
+                return true;
+                
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+                
+            }
         }
     }
 }
